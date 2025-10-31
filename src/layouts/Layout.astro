@@ -38,15 +38,11 @@ const { title, description = "专业的商标注册、商标查询、商标转�
                 // 等待脚本加载完成后再初始化
                 t.onload = function () {
                     if (typeof window.formbricks !== "undefined") {
-                        window.formbricks.setup({
+                        window.formbricks.init({
                             environmentId: environmentId,
-                            appUrl: appUrl,
+                            apiHost: appUrl,
+                            debug: true,
                         });
-
-                        // setup 后立即触发路由检查
-                        setTimeout(function () {
-                            window.formbricks.registerRouteChange();
-                        }, 100);
                     }
                 };
 
