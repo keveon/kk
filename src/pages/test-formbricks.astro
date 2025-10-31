@@ -1,0 +1,179 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formbricks 测试页面</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 { color: #333; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background: #d4edda; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; border: 1px solid #bee5eb; }
+        pre { background: #f5f5f5; padding: 10px; overflow-x: auto; }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>🔧 Formbricks 调试工具</h1>
+
+    <div id="status"></div>
+
+    <h2>操作按钮</h2>
+    <button onclick="clearCache()">清除所有缓存</button>
+    <button onclick="checkStatus()">检查状态</button>
+    <button onclick="showConfig()">显示配置</button>
+    <button onclick="triggerEvent()">触发测试事件</button>
+
+    <h2>日志输出</h2>
+    <pre id="logs"></pre>
+
+    <!-- Formbricks 脚本 -->
+    <script>
+        const logElement = document.getElementById('logs');
+        const statusElement = document.getElementById('status');
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toISOString();
+            const logLine = `[${timestamp}] ${message}\n`;
+            logElement.textContent += logLine;
+            console.log(message);
+        }
+
+        function clearCache() {
+            let count = 0;
+            Object.keys(localStorage).forEach(key => {
+                if (key.includes('formbricks')) {
+                    localStorage.removeItem(key);
+                    count++;
+                }
+            });
+            log(`清除了 ${count} 个 Formbricks 缓存项`);
+            showStatus('success', `已清除 ${count} 个缓存项，刷新页面以重新初始化`);
+        }
+
+        function showStatus(type, message) {
+            statusElement.innerHTML = `<div class="status ${type}">${message}</div>`;
+        }
+
+        function checkStatus() {
+            if (typeof window.formbricks === 'undefined') {
+                log('❌ Formbricks 未加载', 'error');
+                showStatus('error', 'Formbricks 未加载');
+                return;
+            }
+
+            log('✅ Formbricks 已加载');
+            log(`配置: ${JSON.stringify(window.formbricks.config || {}, null, 2)}`);
+            showStatus('success', 'Formbricks 已成功加载');
+        }
+
+        function showConfig() {
+            if (typeof window.formbricks === 'undefined') {
+                log('❌ Formbricks 未加载');
+                return;
+            }
+
+            const config = window.formbricks.config || {};
+            log('=== Formbricks 配置 ===');
+            log(JSON.stringify(config, null, 2));
+
+            // 显示 localStorage 中的所有 Formbricks 数据
+            log('\n=== LocalStorage 数据 ===');
+            Object.keys(localStorage).forEach(key => {
+                if (key.includes('formbricks')) {
+                    log(`${key}: ${localStorage.getItem(key)}`);
+                }
+            });
+        }
+
+        function triggerEvent() {
+            if (typeof window.formbricks === 'undefined') {
+                log('❌ Formbricks 未加载');
+                showStatus('error', '请等待 Formbricks 加载');
+                return;
+            }
+
+            log('触发测试事件: test_event');
+            window.formbricks.track('test_event', { page: 'test' });
+            showStatus('info', '已触发 test_event 事件');
+        }
+
+        // 初始化
+        log('=== Formbricks 调试工具启动 ===');
+        log(`页面 URL: ${window.location.href}`);
+        log(`Hostname: ${window.location.hostname}`);
+    </script>
+
+    <!-- Formbricks SDK -->
+    <script type="text/javascript">
+        // 清除所有 Formbricks 缓存
+        log('清除 Formbricks 缓存...');
+        Object.keys(localStorage).forEach(function(key) {
+            if (key.includes('formbricks')) {
+                localStorage.removeItem(key);
+                log(`已删除: ${key}`);
+            }
+        });
+
+        !(function () {
+            var appUrl = "https://form.keveon.app";
+            var environmentId = "cmheyc4dr0009qt01kj98n0kt";
+            var t = document.createElement("script");
+            t.type = "text/javascript";
+            t.async = true;
+            t.src = appUrl + "/js/formbricks.umd.cjs";
+
+            log(`加载 Formbricks SDK: ${t.src}`);
+
+            t.onload = function () {
+                log('Formbricks SDK 加载成功');
+                if (typeof window.formbricks !== "undefined") {
+                    log('开始初始化 Formbricks...');
+                    window.formbricks.init({
+                        environmentId: environmentId,
+                        apiHost: appUrl,
+                        debug: true,
+                    });
+                    log('✅ Formbricks 初始化完成');
+                    showStatus('success', 'Formbricks 已初始化，检查控制台查看详细日志');
+
+                    // 自动显示配置
+                    setTimeout(() => {
+                        showConfig();
+                    }, 2000);
+                } else {
+                    log('❌ window.formbricks 未定义');
+                    showStatus('error', 'Formbricks 对象未创建');
+                }
+            };
+
+            t.onerror = function() {
+                log('❌ Formbricks SDK 加载失败');
+                showStatus('error', 'SDK 加载失败');
+            };
+
+            var e = document.getElementsByTagName("script")[0];
+            e.parentNode.insertBefore(t, e);
+        })();
+    </script>
+</body>
+</html>

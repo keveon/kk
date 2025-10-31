@@ -19,13 +19,13 @@ const { title, description = "专业的商标注册、商标查询、商标转�
 
         <!-- START Formbricks Surveys -->
         <script type="text/javascript">
-            // 仅在开发模式清除 localStorage
-            if (
-                window.location.hostname === "localhost" ||
-                window.location.hostname === "127.0.0.1"
-            ) {
-                localStorage.clear();
-            }
+            // 清除所有 Formbricks 缓存以确保问卷能显示
+            // 生产环境也清除，确保用户能看到问卷
+            Object.keys(localStorage).forEach(function (key) {
+                if (key.includes("formbricks")) {
+                    localStorage.removeItem(key);
+                }
+            });
 
             !(function () {
                 var appUrl = "https://form.keveon.app";
@@ -43,6 +43,8 @@ const { title, description = "专业的商标注册、商标查询、商标转�
                             apiHost: appUrl,
                             debug: true,
                         });
+
+                        console.log("[Formbricks] Initialized with debug mode");
                     }
                 };
 
