@@ -19,7 +19,14 @@ const { title, description = "专业的商标注册、商标查询、商标转�
 
         <!-- START Formbricks Surveys -->
         <script type="text/javascript">
-            localStorage.clear();
+            // 仅在开发模式清除 localStorage
+            if (
+                window.location.hostname === "localhost" ||
+                window.location.hostname === "127.0.0.1"
+            ) {
+                localStorage.clear();
+            }
+
             !(function () {
                 var appUrl = "https://form.keveon.app";
                 var environmentId = "cmheyc4dr0009qt01kj98n0kt";
