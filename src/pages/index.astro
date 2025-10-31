@@ -600,6 +600,9 @@ import Footer from "../components/Footer.astro";
             // 注意：setUserId 和 setAttribute 仅适用于企业版
             // 社区版/免费版不支持这些功能，Formbricks 会自动管理用户
 
+            // 触发页面路由检查，这会让 Formbricks 检查是否有匹配当前 URL 的问卷
+            window.formbricks.registerRouteChange();
+
             // 1. 追踪页面访问
             window.formbricks.track("page_view", {
                 page_name: "首页",
