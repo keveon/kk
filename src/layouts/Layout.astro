@@ -1,0 +1,50 @@
+---
+interface Props {
+    title: string;
+    description?: string;
+}
+
+const { title, description = "专业的商标注册、商标查询、商标转让服务平台" } =
+    Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title}</title>
+
+        <!-- START Formbricks Surveys -->
+        <script type="text/javascript">
+            localStorage.clear();
+            !(function () {
+                var appUrl = "https://form.keveon.app";
+                var environmentId = "cmheyc4dr0009qt01kj98n0kt";
+                var t = document.createElement("script");
+                t.type = "text/javascript";
+                t.async = true;
+                t.src = appUrl + "/js/formbricks.umd.cjs";
+
+                // 等待脚本加载完成后再初始化
+                t.onload = function () {
+                    if (typeof window.formbricks !== "undefined") {
+                        window.formbricks.setup({
+                            environmentId: environmentId,
+                            appUrl: appUrl,
+                        });
+                    }
+                };
+
+                var e = document.getElementsByTagName("script")[0];
+                e.parentNode.insertBefore(t, e);
+            })();
+        </script>
+        <!-- END Formbricks Surveys -->
+    </head>
+    <body class="min-h-screen bg-gray-50">
+        <slot />
+    </body>
+</html>

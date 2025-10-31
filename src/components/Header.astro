@@ -1,0 +1,56 @@
+---
+// 网站头部导航组件
+---
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center">
+        <a href="/" class="text-2xl font-bold text-primary-600">
+          商标管家
+        </a>
+      </div>
+
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="text-gray-700 hover:text-primary-600 transition-colors">关于我们</a>
+        <a href="#services" class="text-gray-700 hover:text-primary-600 transition-colors">服务项目</a>
+        <a href="#advantages" class="text-gray-700 hover:text-primary-600 transition-colors">我们的优势</a>
+        <a href="#contact" class="text-gray-700 hover:text-primary-600 transition-colors">联系我们</a>
+      </div>
+
+      <div class="hidden md:block">
+        <a href="#contact" class="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors">
+          免费咨询
+        </a>
+      </div>
+
+      <!-- 移动端菜单按钮 -->
+      <button class="md:hidden text-gray-700" id="mobile-menu-button">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 移动端菜单 -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">关于我们</a>
+        <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">服务项目</a>
+        <a href="#advantages" class="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">我们的优势</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">联系我们</a>
+        <a href="#contact" class="block px-3 py-2 bg-primary-600 text-white rounded-md text-center">免费咨询</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // 移动端菜单切换
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

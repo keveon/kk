@@ -1,0 +1,25 @@
+{
+  "name": "kk",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@formbricks/js": "^4.2.1",
+    "astro": "^5.15.3",
+    "zod": "^4.1.12"
+  },
+  "description": "```sh npm create astro@latest -- --template minimal ```",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "playwright": "^1.56.1"
+  }
+}

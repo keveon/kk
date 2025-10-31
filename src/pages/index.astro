@@ -1,0 +1,779 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="商标管家 - 专业的商标服务平台">
+    <Header />
+
+    <!-- Hero Section 英雄区 -->
+    <section
+        class="bg-gradient-to-br from-primary-600 to-primary-800 text-white"
+    >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    保护您的品牌价值
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-primary-100">
+                    专业商标注册、查询、转让一站式服务
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a
+                        href="#services"
+                        class="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                    >
+                        了解服务
+                    </a>
+                    <a
+                        href="#contact"
+                        class="bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-800 transition-colors border-2 border-white"
+                    >
+                        免费咨询
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section 关于我们 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    关于我们
+                </h2>
+                <div class="w-20 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        专业的商标服务专家
+                    </h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        我们是一家专注于知识产权保护的专业服务机构，拥有超过10年的商标服务经验。团队由资深商标代理人、法律顾问组成，为数千家企业提供过专业的商标服务。
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        我们深知商标对企业的重要性，致力于为每一位客户提供高效、专业、贴心的服务，帮助企业建立强大的品牌护城河。
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mt-8">
+                        <div class="text-center">
+                            <div
+                                class="text-3xl font-bold text-primary-600 mb-2"
+                            >
+                                10+
+                            </div>
+                            <div class="text-gray-600 text-sm">服务年限</div>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="text-3xl font-bold text-primary-600 mb-2"
+                            >
+                                5000+
+                            </div>
+                            <div class="text-gray-600 text-sm">服务客户</div>
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="text-3xl font-bold text-primary-600 mb-2"
+                            >
+                                98%
+                            </div>
+                            <div class="text-gray-600 text-sm">成功率</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-100 rounded-lg p-8 h-96 flex items-center justify-center"
+                >
+                    <div class="text-center text-gray-400">
+                        <svg
+                            class="w-24 h-24 mx-auto mb-4"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9a1 1 0 112 0v4a1 1 0 11-2 0V9zm1-4a1 1 0 100 2 1 1 0 000-2z"
+                            ></path>
+                        </svg>
+                        <p>公司形象图片区域</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section 服务项目 -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    服务项目
+                </h2>
+                <div class="w-20 h-1 bg-primary-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    提供全方位的商标服务，满足企业不同阶段的知识产权保护需求
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 商标注册 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                >
+                    <div
+                        class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6"
+                    >
+                        <svg
+                            class="w-8 h-8 text-primary-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        商标注册
+                    </h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        提供国内外商标注册服务，从商标查询、申请到审核，全程跟踪，确保注册成功率。
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">✓</span>
+                            <span>免费商标查询</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">✓</span>
+                            <span>专业风险评估</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">✓</span>
+                            <span>快速递交申请</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 商标查询 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                >
+                    <div
+                        class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6"
+                    >
+                        <svg
+                            class="w-8 h-8 text-primary-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        商标查询
+                    </h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        专业的商标检索服务，帮助您快速了解商标注册情况，降低注册风险。
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">✓</span>
+                            <span>海量商标数据库</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">✓</span>
+                            <span>近似商标分析</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">✓</span>
+                            <span>实时更新信息</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 商标转让 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                >
+                    <div
+                        class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6"
+                    >
+                        <svg
+                            class="w-8 h-8 text-primary-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">
+                        商标转让
+                    </h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        提供商标转让、许可服务，帮助企业快速获得心仪商标，实现品牌战略。
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">✓</span>
+                            <span>商标价值评估</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">✓</span>
+                            <span>转让流程办理</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary-600 mr-2">✓</span>
+                            <span>法律风险把控</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section 我们的优势 -->
+    <section id="advantages" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    我们的优势
+                </h2>
+                <div class="w-20 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                    >
+                        <svg
+                            class="w-10 h-10 text-primary-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        专业团队
+                    </h3>
+                    <p class="text-gray-600">
+                        资深商标代理人团队，平均从业经验10年以上
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                    >
+                        <svg
+                            class="w-10 h-10 text-primary-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        高效快捷
+                    </h3>
+                    <p class="text-gray-600">
+                        优化流程，当天递交申请，实时跟踪进度
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                    >
+                        <svg
+                            class="w-10 h-10 text-primary-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        安全保障
+                    </h3>
+                    <p class="text-gray-600">
+                        严格保密机制，保护客户商业信息安全
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                    >
+                        <svg
+                            class="w-10 h-10 text-primary-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">
+                        一站服务
+                    </h3>
+                    <p class="text-gray-600">
+                        从查询到注册，提供全流程一站式服务
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section 联系我们 -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    联系我们
+                </h2>
+                <div class="w-20 h-1 bg-primary-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    如有任何疑问或需求，欢迎随时联系我们，我们将竭诚为您服务
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 联系表单 -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                        发送咨询
+                    </h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2"
+                                >姓名</label
+                            >
+                            <input
+                                type="text"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                                placeholder="请输入您的姓名"
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2"
+                                >电话</label
+                            >
+                            <input
+                                type="tel"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                                placeholder="请输入您的联系电话"
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2"
+                                >邮箱</label
+                            >
+                            <input
+                                type="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                                placeholder="请输入您的邮箱"
+                            />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2"
+                                >咨询内容</label
+                            >
+                            <textarea
+                                rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                                placeholder="请描述您的需求"></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-full bg-primary-600 text-white py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+                        >
+                            提交咨询
+                        </button>
+                    </form>
+                </div>
+
+                <!-- 联系信息 -->
+                <div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                            联系方式
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
+                                >
+                                    <svg
+                                        class="w-6 h-6 text-primary-600"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="font-semibold text-gray-900 mb-1"
+                                    >
+                                        电话
+                                    </h4>
+                                    <p class="text-gray-600">400-XXX-XXXX</p>
+                                    <p class="text-gray-500 text-sm">
+                                        周一至周日 9:00-18:00
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
+                                >
+                                    <svg
+                                        class="w-6 h-6 text-primary-600"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="font-semibold text-gray-900 mb-1"
+                                    >
+                                        邮箱
+                                    </h4>
+                                    <p class="text-gray-600">
+                                        contact@trademark.com
+                                    </p>
+                                    <p class="text-gray-500 text-sm">
+                                        24小时在线服务
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
+                                >
+                                    <svg
+                                        class="w-6 h-6 text-primary-600"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                        ></path>
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="font-semibold text-gray-900 mb-1"
+                                    >
+                                        地址
+                                    </h4>
+                                    <p class="text-gray-600">
+                                        北京市朝阳区XXX大厦
+                                    </p>
+                                    <p class="text-gray-500 text-sm">
+                                        欢迎预约到访
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-primary-600 rounded-lg p-8 text-white">
+                        <h3 class="text-xl font-bold mb-4">工作时间</h3>
+                        <div class="space-y-2">
+                            <p class="flex justify-between">
+                                <span>周一至周五</span>
+                                <span>9:00 - 18:00</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span>周六至周日</span>
+                                <span>10:00 - 17:00</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>
+
+<script>
+    // Formbricks 事件追踪
+    document.addEventListener("DOMContentLoaded", function () {
+        // 等待 Formbricks 加载完成
+        const waitForFormbricks = setInterval(function () {
+            if (typeof window.formbricks !== "undefined") {
+                clearInterval(waitForFormbricks);
+                initFormbricksTracking();
+            }
+        }, 100);
+
+        function initFormbricksTracking() {
+            // 开发模式：清除问卷显示记录（生产环境可删除）
+            const isDev =
+                window.location.hostname === "localhost" ||
+                window.location.hostname === "127.0.0.1";
+            if (isDev) {
+                // 清除问卷显示记录，让测试时可以重复看到问卷
+                Object.keys(localStorage)
+                    .filter(
+                        (key) =>
+                            key.includes("formbricks") &&
+                            !key.includes("user_id"),
+                    )
+                    .forEach((key) => localStorage.removeItem(key));
+            }
+
+            // 注意：setUserId 和 setAttribute 仅适用于企业版
+            // 社区版/免费版不支持这些功能，Formbricks 会自动管理用户
+
+            // 1. 追踪页面访问
+            window.formbricks.track("page_view", {
+                page_name: "首页",
+                page_url: window.location.href,
+            });
+
+            // 2. 追踪 Hero 区 CTA 按钮点击
+            const heroButtons = document.querySelectorAll(
+                "section:first-of-type a",
+            );
+            heroButtons.forEach((button, index) => {
+                button.addEventListener("click", function (e) {
+                    const buttonText = this.textContent.trim();
+                    const target = this.getAttribute("href");
+
+                    window.formbricks.track("hero_cta_clicked", {
+                        button_text: buttonText,
+                        button_position: index === 0 ? "primary" : "secondary",
+                        target_section: target,
+                    });
+                });
+            });
+
+            // 3. 追踪服务卡片点击 - 了解用户对哪个服务感兴趣
+            const serviceCards = document.querySelectorAll(
+                "#services .bg-white",
+            );
+            serviceCards.forEach(function (card) {
+                card.addEventListener("click", function () {
+                    const serviceName =
+                        this.querySelector("h3")?.textContent.trim();
+
+                    window.formbricks.track("service_card_clicked", {
+                        service_name: serviceName,
+                    });
+                });
+            });
+
+            // 4. 追踪表单交互
+            const form = document.querySelector("#contact form");
+            const formInputs = form?.querySelectorAll("input, textarea");
+
+            // 追踪表单开始填写
+            let formStarted = false;
+            formInputs?.forEach(function (input) {
+                input.addEventListener("focus", function () {
+                    if (!formStarted) {
+                        formStarted = true;
+                        window.formbricks.track("contact_form_started");
+                    }
+                });
+
+                // 追踪每个字段的填写
+                input.addEventListener("blur", function () {
+                    if (this.value.trim()) {
+                        const fieldName = this.closest("div")
+                            ?.querySelector("label")
+                            ?.textContent.trim();
+                        window.formbricks.track("form_field_completed", {
+                            field_name: fieldName,
+                        });
+                    }
+                });
+            });
+
+            // 5. 追踪表单提交
+            form?.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                // 收集表单数据（不包含敏感信息的完整内容）
+                const nameInput = this.querySelector('input[type="text"]');
+                const phoneInput = this.querySelector('input[type="tel"]');
+                const emailInput = this.querySelector('input[type="email"]');
+                const messageInput = this.querySelector("textarea");
+
+                const hasName = nameInput?.value.trim() !== "";
+                const hasPhone = phoneInput?.value.trim() !== "";
+                const hasEmail = emailInput?.value.trim() !== "";
+                const hasMessage = messageInput?.value.trim() !== "";
+
+                window.formbricks.track("contact_form_submitted", {
+                    has_name: hasName,
+                    has_phone: hasPhone,
+                    has_email: hasEmail,
+                    has_message: hasMessage,
+                    message_length: messageInput?.value.length || 0,
+                });
+
+                // 注意：setEmail 和 setAttribute 仅企业版可用
+                // 免费版通过 track 事件属性来记录信息即可
+
+                alert("感谢您的咨询！我们会尽快与您联系。");
+                form.reset();
+            });
+
+            // 6. 追踪区块可见性 - 了解用户浏览深度
+            const sections = document.querySelectorAll("section[id]");
+            const observerOptions = {
+                threshold: 0.5,
+            };
+
+            const sectionObserver = new IntersectionObserver(function (
+                entries,
+            ) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.getAttribute("id");
+                        const sectionTitle = entry.target
+                            .querySelector("h2")
+                            ?.textContent.trim();
+
+                        window.formbricks.track("section_viewed", {
+                            section_id: sectionId,
+                            section_title: sectionTitle,
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(function (section) {
+                sectionObserver.observe(section);
+            });
+
+            // 7. 追踪页面停留时间
+            let pageStartTime = Date.now();
+
+            window.addEventListener("beforeunload", function () {
+                const timeSpent = Math.round(
+                    (Date.now() - pageStartTime) / 1000,
+                );
+
+                // 使用 sendBeacon 确保数据发送
+                if (timeSpent >= 5) {
+                    // 只追踪停留5秒以上的
+                    window.formbricks.track("page_time_spent", {
+                        duration_seconds: timeSpent,
+                        page_name: "首页",
+                    });
+                }
+            });
+
+            // 8. 追踪滚动深度
+            let maxScrollDepth = 0;
+            let scrollTracked = {
+                "25": false,
+                "50": false,
+                "75": false,
+                "100": false,
+            };
+
+            window.addEventListener("scroll", function () {
+                const scrollPercentage = Math.round(
+                    ((window.scrollY + window.innerHeight) /
+                        document.documentElement.scrollHeight) *
+                        100,
+                );
+
+                if (scrollPercentage > maxScrollDepth) {
+                    maxScrollDepth = scrollPercentage;
+                }
+
+                // 追踪关键滚动点
+                ["25", "50", "75", "100"].forEach(function (milestone) {
+                    if (
+                        scrollPercentage >= parseInt(milestone) &&
+                        !scrollTracked[milestone]
+                    ) {
+                        scrollTracked[milestone] = true;
+                        window.formbricks.track("scroll_depth", {
+                            depth_percentage: milestone,
+                        });
+                    }
+                });
+            });
+        }
+    });
+</script>
