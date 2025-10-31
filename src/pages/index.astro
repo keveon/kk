@@ -603,6 +603,20 @@ import Footer from "../components/Footer.astro";
             // 触发页面路由检查，这会让 Formbricks 检查是否有匹配当前 URL 的问卷
             window.formbricks.registerRouteChange();
 
+            // 调试：检查 Formbricks 状态
+            console.log("[Formbricks Debug] Config:", window.formbricks.config);
+
+            // 尝试多个可能的事件名称
+            const possibleEvents = ["pageView", "page_view", "page_load"];
+            possibleEvents.forEach((eventName) => {
+                try {
+                    window.formbricks.track(eventName);
+                    console.log("[Formbricks Debug] Tracked:", eventName);
+                } catch (e) {
+                    console.warn("[Formbricks Debug] Failed:", eventName);
+                }
+            });
+
             // 1. 追踪页面访问
             window.formbricks.track("page_view", {
                 page_name: "首页",

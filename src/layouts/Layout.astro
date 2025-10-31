@@ -42,6 +42,11 @@ const { title, description = "专业的商标注册、商标查询、商标转�
                             environmentId: environmentId,
                             appUrl: appUrl,
                         });
+
+                        // setup 后立即触发路由检查
+                        setTimeout(function () {
+                            window.formbricks.registerRouteChange();
+                        }, 100);
                     }
                 };
 
