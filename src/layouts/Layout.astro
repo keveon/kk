@@ -17,42 +17,10 @@ const { title, description = "专业的商标注册、商标查询、商标转�
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <title>{title}</title>
 
-        <!-- START Formbricks Surveys -->
-        <script type="text/javascript">
-            // 清除所有 Formbricks 缓存以确保问卷能显示
-            // 生产环境也清除，确保用户能看到问卷
-            Object.keys(localStorage).forEach(function (key) {
-                if (key.includes("formbricks")) {
-                    localStorage.removeItem(key);
-                }
-            });
-
-            !(function () {
-                var appUrl = "https://form.keveon.app";
-                var environmentId = "cmheyc4dr0009qt01kj98n0kt";
-                var t = document.createElement("script");
-                t.type = "text/javascript";
-                t.async = true;
-                t.src = appUrl + "/js/formbricks.umd.cjs";
-
-                // 等待脚本加载完成后再初始化
-                t.onload = function () {
-                    if (typeof window.formbricks !== "undefined") {
-                        window.formbricks.init({
-                            environmentId: environmentId,
-                            apiHost: appUrl,
-                            debug: true,
-                        });
-
-                        console.log("[Formbricks] Initialized with debug mode");
-                    }
-                };
-
-                var e = document.getElementsByTagName("script")[0];
-                e.parentNode.insertBefore(t, e);
-            })();
-        </script>
-        <!-- END Formbricks Surveys -->
+        <!-- HeyForm -->
+        <script
+            src="https://www.unpkg.com/@heyform-inc/embed@latest/dist/index.umd.js"
+        ></script>
     </head>
     <body class="min-h-screen bg-gray-50">
         <slot />
